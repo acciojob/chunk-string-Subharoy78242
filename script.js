@@ -2,12 +2,20 @@ function stringChop(str, size) {
   if (str === null || size <= 0) {
     return [];
   }
-  
+
+  if (str === '') {
+    return [];
+  }
+
+  if (size >= str.length) {
+    return [str];
+  }
+
   const chunks = [];
   for (let i = 0; i < str.length; i += size) {
     chunks.push(str.slice(i, i + size));
   }
-  
+
   return chunks;
 }
 
