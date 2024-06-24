@@ -1,9 +1,5 @@
 function stringChop(str, size) {
-  if (str === null || size <= 0) {
-    return [];
-  }
-
-  if (str === '') {
+  if (str === null || str === '' || size <= 0) {
     return [];
   }
 
